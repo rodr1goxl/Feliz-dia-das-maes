@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/favicon.ico">
+    
+    <!-- Meta tags para controle da prévia -->
+    <meta property="og:title" content="O quê tem aqui?  🤔" />
+    <meta property="og:description" content="Descobre ai pá nois 🤭" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/rodr1goxl/Imagens-/refs/heads/main/favicon.ico" />
+    <meta property="og:url" content="https://rodr1goxl.github.io/Feliz-aniversario-/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow, noimageindex">
+    <!-- Meta tag com a frase única -->
+    <meta name="keywords" content="22:2523082024">
+
+    <title class="tii">Feliz Dia das mães</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Frase única invisível, mas visível para o Google -->
+    <p style="display: none;">22:2523082024</p>
+
+    <!-- Botão de alternância de tema -->
+    <div class="theme-toggle-container">
+        <label for="themeToggle" class="themeToggle st-sunMoonThemeToggleBtn" type="checkbox">
+            <input type="checkbox" id="themeToggle" class="themeToggleInput" />
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" stroke="none">
+                <mask id="moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle cx="11" cy="3" r="8" fill="black"></circle>
+                </mask>
+                <circle class="sunMoon" cx="10" cy="10" r="8" mask="url(#moon-mask)"></circle>
+                <g>
+                    <circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+                    <circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+                    <circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+                    <circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+                    <circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+                    <circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+                </g>
+            </svg>
+        </label>
+    </div>
+
+    <!-- Tela Inicial -->
+    <div id="tela-inicial">
+        <button id="botao-entrada" class="neon-button">💜 Clique aqui</button>
+    </div>
+
+    <!-- Conteúdo do site -->
+    <div id="conteudo" style="display: none;">
+        <div class="music-container">
+            <label class="music-button">
+                <input type="checkbox" id="music-toggle" />
+                <svg class="play" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                    <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
+                </svg>
+                <svg class="pause" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                    <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"></path>
+                </svg>
+            </label>
+            <span class="music-text">Música</span>
+        </div>
+
+        <audio id="musica" src="audio/musica.mp3" loop></audio>
+
+        <div class="container">
+            <div class="slider">
+                <div class="slides-wrapper">
+                    <img src="imagens/imagem1.jpg" alt="Imagem 1" class="slide">
+                    <img src="imagens/imagem2.jpg" alt="Imagem 2" class="slide">
+                    <img src="imagens/imagem3.jpg" alt="Imagem 3" class="slide">
+                    <img src="imagens/imagem4.jpg" alt="Imagem 4" class="slide">
+                    <img src="imagens/imagem5.jpg" alt="Imagem 5" class="slide">
+                    <img src="imagens/imagem6.jpg" alt="Imagem 6" class="slide">
+                    <img src="imagens/imagem7.jpg" alt="Imagem 7" class="slide">
+                    <img src="imagens/imagem8.jpg" alt="Imagem 8" class="slide">
+                    <img src="imagens/imagem9.jpg" alt="Imagem 9" class="slide">
+                    <img src="imagens/imagem10.jpg" alt="Imagem 10" class="slide">
+                </div>
+            </div>
+
+            <h2 class="r">Feliz Dia das mães<br> 🥰</h2>
+            
+            <h3 class="ttt">Que cuida de mim ah:</h3>
+            
+            <div id="contador"></div>
+
+            <div class="linha"></div>
+            <p style="display:none;">Amizade é sol em dia nublado,
+é riso solto quando tudo parece pesado,
+é abraço que cala o medo e a dor,
+é colo sem pressa, é puro amor.
+
+É estar junto mesmo de longe,
+é saber do outro sem precisar que conte,
+é dividir o silêncio e ainda assim entender,
+é celebrar vitórias e ajudar a renascer.
+
+Amigo é quem segura a mão na tempestade,
+é quem fala a verdade com suavidade,
+é quem conhece os defeitos, e ainda assim fica,
+é quem compartilha o fardo, e nunca complica.
+
+É presença que não cobra, mas acolhe,
+é risada que explode e não se recolhe,
+é lembrança boa guardada no peito,
+é certeza que o mundo ainda tem jeito.
+
+Amizade é plantar sem querer colher,
+é doar sem esperar receber,
+é estar por perto só por querer bem,
+é dizer "tô aqui" sem precisar dizer "vem".
+
+É café tarde da noite, conversa jogada,
+é plano doido, viagem improvisada,
+é chorar junto vendo filme clichê,
+é brigar e depois esquecer porquê.
+
+É saber que o tempo pode passar,
+mas que a conexão vai sempre ficar.
+É foto velha que arranca sorriso,
+é aquele "lembra disso?" que aquece o juízo.
+
+Amigo é tesouro que não se compra,
+é estrela-guia quando o caminho desmonta.
+É quem vê tua sombra e ainda assim escolhe ficar,
+é farol aceso pra te orientar.
+
+Então celebre seus amigos de coração,
+eles são parte da tua canção.
+Porque amizade é ponte, é raiz, é laço,
+é a vida dizendo: "não caminha sozinho, eu faço o passo."</p>
+
+            <p class="p">Mãe, hoje é seu dia, ou melhor, todo dia é seu. Eu podia escrever um textão cheio de coisa bonita, mas nada disso chega perto do que você é pra mim. Então vou ser direto: te amo demais.<br>
+Você sempre esteve ali, mesmo quando eu nem sabia que precisava. Seu jeito, seu carinho, suas brigas<br> (sim, até elas) fazem parte de quem eu sou.<br>
+Obrigada por tudo, por tanto, sempre. Por ter paciência, por me ensinar, por ser esse porto seguro para mim.<br>
+Feliz Dia das Mães! Que seu dia seja tão especial quanto você é pra mim. 💜</p>
+        </div>
+
+        <footer class="rodape">
+            <p>&copy; Por:@rodr1go_xl
+    <br>
+    ⠀⠀⠀✦ ⠀<br> ⠀　　　　　　　　　　　　　<br>　⠀⠀⠀⠀⠀*<br> ⠀⠀⠀.　　　　　　　　　　.<br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀<br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀☄️ ⠀<br> ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　<br>　　.　　　ﾟ<br> .　　　　　　　　　　　　　.<br> 　　　　　　　　　　　　　　　✦<br> 　　　　　,　　　　　　　.<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀☀️<br>
+    　　　　　<br>　*　　　　　　　　　　　.<br>
+    .　　　　　　　　　　　　　. 　<br>　✦⠀　   　　　,　　　　　　　　　*<br>
+    　　　　　⠀　　　　⠀　　,<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　<br>　⠀　　　⠀.　<br>
+    　　˚　　　⠀<br>　⠀  　　,　　　　　　.<br>
+    　　　　　　　　　　　　　.<br>
+    　　　　　　*⠀　　⠀  　　　　<br>　⠀✦⠀　<br>
+    　　　　　　　　　　　　　　　　<br>　　.<br>
+    　　　　.　　　　.　　　⠀🌕<br>
+    　　　　　　　　　　　.<br>
+    　　　　　　　🚀<br>
+    　　　˚　　　　　　　　ﾟ　　　　　.<br>
+    　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,<br>
+    　　　*　　⠀.<br>
+    　　　　　.　　　　　　　　　　⠀✦<br>
+    　˚　　　　　　　　　　　　　　*<br>
+    .⠀<br> 　　　　　　　　　　.　　　　　<br>　　　.<br>
+    　　　　　✦⠀　   　　　,　　    　<br>　🌎　°　　<br>
+    <br>
+    　•　　.°•　　　🚀 <br>
+    ✯<br>
+    　　　★　*　　　　　°　　　　🛰<br> 　°·
+</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+/* Fundo preto e centralização */
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-size: clamp(14px, 2vw, 17px);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Slider */
+.slider {
+    width: 75%;
+    max-width: 200px; /* Diminuído um pouco mais */
+    height: auto;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 50px; /* Pequeno ajuste */
+}
+
+/* Wrapper para transição suave */
+.slides-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Imagens */
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Linha roxa */
+.linha {
+    width: 95%;
+    height: 0.5px;
+    background-color: #D20DFF;
+    margin: 12px 0;
+}
+
+/* Corações caindo */
+.coracao {
+    position: fixed;
+    top: 0;
+    font-size: 24px;
+    animation: cair 10s linear forwards;
+    opacity: 1;
+}
+
+@keyframes cair {
+    0% { transform: translateY(0); opacity: 1; }
+    70% { opacity: 0.5; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Botão de música */
+.music-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: transparent; /* Fundo transparente */
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 3px solid transparent; /* Remove a borda */
+    z-index: 10;
+}
+
+/* Texto ao lado do botão */
+.music-text {
+    color: #D20DFFA3;
+    font-size: 18px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+/* Estilo do botão */
+.music-button {
+    --color: #D20DFFA3;
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+}
+
+.music-button .play {
+    position: absolute;
+}
+
+.music-button .pause {
+    position: absolute;
+    display: none;
+}
+
+/* Quando o botão for ativado */
+.music-button input:checked ~ .play {
+    display: none;
+}
+
+.music-button input:checked ~ .pause {
+    display: block;
+}
+
+/* Esconde o checkbox padrão */
+.music-button input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Estilo do contador */
+#contador {
+    font-size: 20px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Estilo do título */
+.ttt {
+    font-size: 25px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0; /* Removendo totalmente a margem inferior */
+    padding-bottom: 0; /* Garantindo que não há espaço extra */
+}
+
+/* Ajuste no parágrafo abaixo do título */
+.p {
+    margin-top: 5px; /* Reduzindo espaço entre título e o próximo elemento */
+}
+/* Tela Inicial */
+#tela-inicial {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilo do botão */
+.botao {
+    background: transparent;
+    border: 2px solid #a854b2;
+    color: #a854b2;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.botao:hover {
+    background-color: #a854b2;
+    color: black;
+}
+
+/* Espaçamento do parágrafo */
+.p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 384px) { /* Galaxy A05 e iPhone SE */
+    .slider {
+        max-width: 180px;
+    }
+    .music-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) { /* Galaxy A01 e celulares pequenos */
+    .slider {
+        max-width: 160px;
+    }
+    .music-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) { /* iPhone 12, 13, 14 */
+    .slider {
+        max-width: 190px;
+    }
+    .music-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 430px) { /* iPhone 14 Pro */
+    .slider {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 460px) { /* iPhone 15 Pro Max */
+    .slider {
+        max-width: 210px;
+    }
+}
+.r {
+    font-size: 30px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0; /* Removendo totalmente a margem inferior */
+    padding-bottom: 0; /* Garantindo que não há espaço extra */
+}
+.p {
+    max-width: 85%; /* Define uma largura máxima para não espalhar muito */
+    text-align: justify; /* Justifica o texto para alinhar os dois lados */
+    margin: 10px auto; /* Centraliza o texto e adiciona espaçamento */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ .rodape{
+     color: #A1A1A18A;
+ }
+/* Botão neon*/ 
+.neon-button {
+  position: relative;
+  padding: 0.75em 1.5em;
+  border-radius: 0.625em;
+  border: 2px solid #CD33DF;
+  font-size: 0.938em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  background: transparent;
+  color: #CD33DF;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 40px 10px rgba(250, 0, 255, 0.5); /* Luz sempre ligada */
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.neon-button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, #CD33DF, transparent);
+  box-shadow: 0 0 50px 30px #CD33DF;
+  transform: skewX(-20deg);
+  animation: neon-shine 2s linear infinite; /* Agora animando para sempre */
+}
+
+@keyframes neon-shine {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.neon-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 0.2s ease-in;
+}
+
+/* ===== BOTÃO DE TEMA ===== */
+.theme-toggle-container {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  z-index: 1001;
+  display: none; /* Escondido inicialmente */
+}
+
+.themeToggle {
+  color: #D20DFFA3;
+  width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.themeToggle:hover {
+  background: transparent;
+}
+
+/* Estilos do botão de tema */
+.st-sunMoonThemeToggleBtn {
+  position: relative;
+  cursor: pointer;
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput {
+  opacity: 0;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.st-sunMoonThemeToggleBtn svg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+  transform: rotate(40deg);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunMoon {
+  transform-origin: center center;
+  transition: inherit;
+  transform: scale(1);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunRay {
+  transform-origin: center center;
+  transform: scale(0);
+}
+
+.st-sunMoonThemeToggleBtn svg mask > circle {
+  transition: transform 0.64s cubic-bezier(0.41, 0.64, 0.32, 1.575);
+  transform: translate(0px, 0px);
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg {
+  transform: rotate(90deg);
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg mask > circle {
+  transform: translate(16px, -3px);
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunMoon {
+  transform: scale(0.55);
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunRay {
+  animation: showRay1832 0.4s ease 0s 1 forwards;
+}
+
+@keyframes showRay1832 {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+/* Estilos para tema claro */
+body.tema-claro {
+  background: #DBC7A0;
+  color: black;
+}
+
+body.tema-claro .linha {
+  background-color: black;
+}
+
+body.tema-claro .rodape {
+  color: #59544B;
+}
+
+body.tema-claro .music-container,
+body.tema-claro .music-text {
+  color: #59544B;
+}
+
+body.tema-claro .music-button {
+  background-color: black;
+}
+
+body.tema-claro .ttt,
+body.tema-claro .r,
+body.tema-claro #contador {
+  color: black;
+}
+
+body.tema-claro .themeToggle {
+  color: #000000AB;
+  background: rgba(219, 199, 160, 0.3);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.tema-claro .themeToggle:hover {
+  background: rgba(219, 199, 160, 0.5);
+}
+
+body.tema-claro .coracao {
+  color: black !important;
+}
+
+body.tema-claro .music-button {
+  fill: #000000AB !important;
+}
+
+body.tema-claro .music-button svg {
+  fill: #000000AB !important;
+}
+
+body.tema-claro .music-text {
+  color: #000000AB !important;
+}
+
+/* Remove o highlight azul em todos os elementos clicáveis */
+button, 
+input[type="checkbox"], 
+label {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* Remove o outline em foco para acessibilidade sem o azul */
+button:focus, 
+input:focus, 
+label:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Especificamente para o botão de tema */
+.themeToggle {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Para o botão neon */
+.neon-button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Adicione esta regra no início do CSS, no seletor body */
+body {
+  transition: 
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* Adicione transição para todos os elementos que mudam de cor */
+.linha,
+.music-container,
+.music-text,
+.music-button svg,
+.ttt,
+.r,
+#contador,
+.rodape,
+.coracao,
+.themeToggle {
+  transition: 
+    background-color 0.5s ease,
+    color 0.5s ease,
+    fill 0.5s ease,
+    border-color 0.5s ease;
+}
+
+/* Especificamente para o botão de música */
+.music-button {
+  transition: fill 0.5s ease;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slides-wrapper {
+    display: flex;
+    transition: transform 1s ease-out;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+}
